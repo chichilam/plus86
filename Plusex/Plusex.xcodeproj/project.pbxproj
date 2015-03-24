@@ -14,6 +14,7 @@
 		245D57C11AC189A800214FCC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 245D57C01AC189A800214FCC /* Images.xcassets */; };
 		245D57C41AC189A800214FCC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245D57C21AC189A800214FCC /* LaunchScreen.xib */; };
 		245D57D01AC189A800214FCC /* PlusexTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D57CF1AC189A800214FCC /* PlusexTests.m */; };
+		3212ED42ED0E4EAFFEED9552 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F40DEC8359A0036A2110FC /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,9 @@
 		245D57C91AC189A800214FCC /* PlusexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlusexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		245D57CE1AC189A800214FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		245D57CF1AC189A800214FCC /* PlusexTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlusexTests.m; sourceTree = "<group>"; };
+		82036DB05E576E38897072D8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		828ADD057E37FA889C878515 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A1F40DEC8359A0036A2110FC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3212ED42ED0E4EAFFEED9552 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +71,8 @@
 				245D57B21AC189A800214FCC /* Plusex */,
 				245D57CC1AC189A800214FCC /* PlusexTests */,
 				245D57B11AC189A800214FCC /* Products */,
+				999A4EA81821DD05461CEC87 /* Pods */,
+				6F98D2BC3E1E1C4F616758A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +126,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6F98D2BC3E1E1C4F616758A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1F40DEC8359A0036A2110FC /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		999A4EA81821DD05461CEC87 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				828ADD057E37FA889C878515 /* Pods.debug.xcconfig */,
+				82036DB05E576E38897072D8 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 245D57D31AC189A800214FCC /* Build configuration list for PBXNativeTarget "Plusex" */;
 			buildPhases = (
+				2158449AFE1657D27084B6AA /* Check Pods Manifest.lock */,
 				245D57AC1AC189A800214FCC /* Sources */,
 				245D57AD1AC189A800214FCC /* Frameworks */,
 				245D57AE1AC189A800214FCC /* Resources */,
+				B0E4FF33F14B3AF393565BAF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +239,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2158449AFE1657D27084B6AA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B0E4FF33F14B3AF393565BAF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		245D57AC1AC189A800214FCC /* Sources */ = {
@@ -343,6 +402,7 @@
 		};
 		245D57D41AC189A800214FCC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 828ADD057E37FA889C878515 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Plusex/Info.plist;
@@ -353,6 +413,7 @@
 		};
 		245D57D51AC189A800214FCC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82036DB05E576E38897072D8 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Plusex/Info.plist;
@@ -414,6 +475,7 @@
 				245D57D51AC189A800214FCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		245D57D61AC189A800214FCC /* Build configuration list for PBXNativeTarget "PlusexTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +484,7 @@
 				245D57D81AC189A800214FCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
