@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PEXHumanDetailViewController.h"
 
-@interface PEXHumanResultViewController : UIViewController
+@interface PEXHumanResultViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
 @end

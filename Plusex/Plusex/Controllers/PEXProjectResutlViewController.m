@@ -10,14 +10,18 @@
 
 @interface PEXProjectResutlViewController ()
 
-@property (weak, nonatomic) IBOutlet UITableView *resutlTableView;
+@property (weak, nonatomic) IBOutlet UITableView *resultTableView;
 @end
 
-@implementation PEXProjectResutlViewController
+@implementation PEXProjectResutlViewController {
+    NSMutableArray *dataArr;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [self fetchData];
     
     [self initView];
 }
@@ -37,9 +41,37 @@
 }
 */
 
+#pragma mark - fetch project search result
+-(void) fetchData {
+    //FIXME dammy data
+    
+    dataArr = [NSMutableArray array];
+    
+    for (NSInteger i = 0; i < 3; i++) {
+        NSDictionary *dataDic = @{@"name":[NSString stringWithFormat:@"project%ld",(long)i]};
+        [dataArr addObject:dataDic];
+    }
+}
+
 #pragma mark - initial view
 -(void) initView {
+    self.resultTableView.delegate = self;
+    self.resultTableView.dataSource = self;
+}
+
+#pragma mark - UITableViewDelegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return dataArr.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *dataDic = dataArr[indexPath.row];
     
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    
+    cell.textLabel.text = [dataDic objectForKey:@"name"];
+    
+    return cell;
 }
 
 @end

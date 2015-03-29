@@ -4,9 +4,8 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PEXProjectResutlViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PEXProjectDetai_ViewController">
             <connections>
-                <outlet property="resultTableView" destination="ZXd-qe-fwe" id="xlL-yt-sFX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,19 +14,19 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ZXd-qe-fwe">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KN2-6b-gTi">
+                    <rect key="frame" x="109" y="273" width="103" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="ZXd-qe-fwe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5vy-8C-UcT"/>
-                <constraint firstItem="ZXd-qe-fwe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QMZ-KQ-Tlt"/>
-                <constraint firstAttribute="trailing" secondItem="ZXd-qe-fwe" secondAttribute="trailing" id="bDZ-CK-lZv"/>
-                <constraint firstAttribute="bottom" secondItem="ZXd-qe-fwe" secondAttribute="bottom" id="hKL-6l-QJ3"/>
+                <constraint firstAttribute="centerX" secondItem="KN2-6b-gTi" secondAttribute="centerX" constant="-0.5" id="ToJ-n4-zL5"/>
+                <constraint firstAttribute="centerY" secondItem="KN2-6b-gTi" secondAttribute="centerY" constant="0.5" id="Ukn-Yl-I7s"/>
             </constraints>
-            <point key="canvasLocation" x="233" y="390"/>
+            <point key="canvasLocation" x="233" y="405"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

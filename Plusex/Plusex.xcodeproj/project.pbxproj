@@ -28,6 +28,10 @@
 		24DF0D6E1AC7C303004C0677 /* PEXProjectResutlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DF0D6C1AC7C303004C0677 /* PEXProjectResutlViewController.xib */; };
 		24DF0D721AC7C32A004C0677 /* PEXHumanResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF0D701AC7C32A004C0677 /* PEXHumanResultViewController.m */; };
 		24DF0D731AC7C32A004C0677 /* PEXHumanResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DF0D711AC7C32A004C0677 /* PEXHumanResultViewController.xib */; };
+		24DF0D7C1AC7C746004C0677 /* PEXProjectDetai;ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF0D7A1AC7C746004C0677 /* PEXProjectDetai;ViewController.m */; };
+		24DF0D7D1AC7C746004C0677 /* PEXProjectDetai;ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DF0D7B1AC7C746004C0677 /* PEXProjectDetai;ViewController.xib */; };
+		24DF0D811AC7C786004C0677 /* PEXHumanDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF0D7F1AC7C786004C0677 /* PEXHumanDetailViewController.m */; };
+		24DF0D821AC7C786004C0677 /* PEXHumanDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DF0D801AC7C786004C0677 /* PEXHumanDetailViewController.xib */; };
 		3212ED42ED0E4EAFFEED9552 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F40DEC8359A0036A2110FC /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +81,12 @@
 		24DF0D6F1AC7C32A004C0677 /* PEXHumanResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEXHumanResultViewController.h; sourceTree = "<group>"; };
 		24DF0D701AC7C32A004C0677 /* PEXHumanResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEXHumanResultViewController.m; sourceTree = "<group>"; };
 		24DF0D711AC7C32A004C0677 /* PEXHumanResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PEXHumanResultViewController.xib; sourceTree = "<group>"; };
+		24DF0D791AC7C746004C0677 /* PEXProjectDetai;ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PEXProjectDetai;ViewController.h"; sourceTree = "<group>"; };
+		24DF0D7A1AC7C746004C0677 /* PEXProjectDetai;ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PEXProjectDetai;ViewController.m"; sourceTree = "<group>"; };
+		24DF0D7B1AC7C746004C0677 /* PEXProjectDetai;ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "PEXProjectDetai;ViewController.xib"; sourceTree = "<group>"; };
+		24DF0D7E1AC7C786004C0677 /* PEXHumanDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEXHumanDetailViewController.h; sourceTree = "<group>"; };
+		24DF0D7F1AC7C786004C0677 /* PEXHumanDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEXHumanDetailViewController.m; sourceTree = "<group>"; };
+		24DF0D801AC7C786004C0677 /* PEXHumanDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PEXHumanDetailViewController.xib; sourceTree = "<group>"; };
 		82036DB05E576E38897072D8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		828ADD057E37FA889C878515 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A1F40DEC8359A0036A2110FC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,6 +205,9 @@
 				24DF0D6A1AC7C303004C0677 /* PEXProjectResutlViewController.h */,
 				24DF0D6B1AC7C303004C0677 /* PEXProjectResutlViewController.m */,
 				24DF0D6C1AC7C303004C0677 /* PEXProjectResutlViewController.xib */,
+				24DF0D791AC7C746004C0677 /* PEXProjectDetai;ViewController.h */,
+				24DF0D7A1AC7C746004C0677 /* PEXProjectDetai;ViewController.m */,
+				24DF0D7B1AC7C746004C0677 /* PEXProjectDetai;ViewController.xib */,
 			);
 			name = Project;
 			sourceTree = "<group>";
@@ -208,6 +221,9 @@
 				24DF0D6F1AC7C32A004C0677 /* PEXHumanResultViewController.h */,
 				24DF0D701AC7C32A004C0677 /* PEXHumanResultViewController.m */,
 				24DF0D711AC7C32A004C0677 /* PEXHumanResultViewController.xib */,
+				24DF0D7E1AC7C786004C0677 /* PEXHumanDetailViewController.h */,
+				24DF0D7F1AC7C786004C0677 /* PEXHumanDetailViewController.m */,
+				24DF0D801AC7C786004C0677 /* PEXHumanDetailViewController.xib */,
 			);
 			name = Human;
 			sourceTree = "<group>";
@@ -333,9 +349,11 @@
 			files = (
 				24DF0D6E1AC7C303004C0677 /* PEXProjectResutlViewController.xib in Resources */,
 				24DF0D641AC7BB83004C0677 /* PEXManagementViewController.xib in Resources */,
+				24DF0D821AC7C786004C0677 /* PEXHumanDetailViewController.xib in Resources */,
 				24DF0D481AC79DFA004C0677 /* PEXStartupViewController.xib in Resources */,
 				245D57C41AC189A800214FCC /* LaunchScreen.xib in Resources */,
 				24DF0D5F1AC7BB02004C0677 /* PEXHumanSearchViewController.xib in Resources */,
+				24DF0D7D1AC7C746004C0677 /* PEXProjectDetai;ViewController.xib in Resources */,
 				24DF0D571AC7BAC8004C0677 /* PEXProjectSearchViewController.xib in Resources */,
 				24DF0D691AC7BCCB004C0677 /* PEXUserInfoViewController.xib in Resources */,
 				245D57C11AC189A800214FCC /* Images.xcassets in Resources */,
@@ -396,8 +414,10 @@
 				24DF0D411AC79B94004C0677 /* PEXAppDelegate.m in Sources */,
 				24DF0D631AC7BB83004C0677 /* PEXManagementViewController.m in Sources */,
 				24DF0D6D1AC7C303004C0677 /* PEXProjectResutlViewController.m in Sources */,
+				24DF0D811AC7C786004C0677 /* PEXHumanDetailViewController.m in Sources */,
 				24DF0D471AC79DFA004C0677 /* PEXStartupViewController.m in Sources */,
 				24DF0D681AC7BCCB004C0677 /* PEXUserInfoViewController.m in Sources */,
+				24DF0D7C1AC7C746004C0677 /* PEXProjectDetai;ViewController.m in Sources */,
 				245D57B61AC189A800214FCC /* main.m in Sources */,
 				24DF0D4C1AC7A2C6004C0677 /* PEXRegisterViewController.m in Sources */,
 				24DF0D721AC7C32A004C0677 /* PEXHumanResultViewController.m in Sources */,
