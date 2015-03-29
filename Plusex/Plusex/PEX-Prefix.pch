@@ -1,0 +1,21 @@
+//
+//  PEX-Prefix.pch
+//  Plusex
+//
+//  Created by rin on 2015/03/29.
+//  Copyright (c) 2015年 rin. All rights reserved.
+//
+
+#ifndef Plusex_PEX_Prefix_pch
+#define Plusex_PEX_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
+
+#ifdef DEBUG
+#define APLog(x...) NSLog(@"%s:%d:%@", __FUNCTION__, __LINE__, [NSString stringWithFormat:x]);
+#else
+#define APLog(x...)
+#endif

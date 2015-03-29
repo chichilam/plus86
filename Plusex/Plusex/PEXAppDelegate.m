@@ -1,22 +1,28 @@
 //
-//  AppDelegate.m
+//  PEXAppDelegate.m
 //  Plusex
 //
-//  Created by rin on 2015/03/24.
+//  Created by rin on 2015/03/29.
 //  Copyright (c) 2015年 rin. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "PEXAppDelegate.h"
 
-@interface AppDelegate ()
+@interface PEXAppDelegate()
 
 @end
 
-@implementation AppDelegate
-
+@implementation PEXAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    PEXStartupViewController *viewController = [[PEXStartupViewController alloc] init];
+    self.window.rootViewController = viewController;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

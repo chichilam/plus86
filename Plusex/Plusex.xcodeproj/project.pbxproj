@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		245D57B61AC189A800214FCC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D57B51AC189A800214FCC /* main.m */; };
-		245D57B91AC189A800214FCC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D57B81AC189A800214FCC /* AppDelegate.m */; };
-		245D57BC1AC189A800214FCC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D57BB1AC189A800214FCC /* ViewController.m */; };
-		245D57BF1AC189A800214FCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245D57BD1AC189A800214FCC /* Main.storyboard */; };
 		245D57C11AC189A800214FCC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 245D57C01AC189A800214FCC /* Images.xcassets */; };
 		245D57C41AC189A800214FCC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245D57C21AC189A800214FCC /* LaunchScreen.xib */; };
 		245D57D01AC189A800214FCC /* PlusexTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D57CF1AC189A800214FCC /* PlusexTests.m */; };
+		24DF0D411AC79B94004C0677 /* PEXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF0D401AC79B94004C0677 /* PEXAppDelegate.m */; };
+		24DF0D471AC79DFA004C0677 /* PEXStartupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF0D451AC79DFA004C0677 /* PEXStartupViewController.m */; };
+		24DF0D481AC79DFA004C0677 /* PEXStartupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DF0D461AC79DFA004C0677 /* PEXStartupViewController.xib */; };
 		3212ED42ED0E4EAFFEED9552 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F40DEC8359A0036A2110FC /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -31,16 +31,17 @@
 		245D57B01AC189A800214FCC /* Plusex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plusex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		245D57B41AC189A800214FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		245D57B51AC189A800214FCC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		245D57B71AC189A800214FCC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		245D57B81AC189A800214FCC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		245D57BA1AC189A800214FCC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		245D57BB1AC189A800214FCC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		245D57BE1AC189A800214FCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		245D57C01AC189A800214FCC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		245D57C31AC189A800214FCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		245D57C91AC189A800214FCC /* PlusexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlusexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		245D57CE1AC189A800214FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		245D57CF1AC189A800214FCC /* PlusexTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlusexTests.m; sourceTree = "<group>"; };
+		24DF0D3F1AC79B94004C0677 /* PEXAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEXAppDelegate.h; sourceTree = "<group>"; };
+		24DF0D401AC79B94004C0677 /* PEXAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEXAppDelegate.m; sourceTree = "<group>"; };
+		24DF0D421AC79CDF004C0677 /* PEX-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PEX-Prefix.pch"; sourceTree = "<group>"; };
+		24DF0D441AC79DFA004C0677 /* PEXStartupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEXStartupViewController.h; sourceTree = "<group>"; };
+		24DF0D451AC79DFA004C0677 /* PEXStartupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEXStartupViewController.m; sourceTree = "<group>"; };
+		24DF0D461AC79DFA004C0677 /* PEXStartupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PEXStartupViewController.xib; sourceTree = "<group>"; };
 		82036DB05E576E38897072D8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		828ADD057E37FA889C878515 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A1F40DEC8359A0036A2110FC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,11 +89,9 @@
 		245D57B21AC189A800214FCC /* Plusex */ = {
 			isa = PBXGroup;
 			children = (
-				245D57B71AC189A800214FCC /* AppDelegate.h */,
-				245D57B81AC189A800214FCC /* AppDelegate.m */,
-				245D57BA1AC189A800214FCC /* ViewController.h */,
-				245D57BB1AC189A800214FCC /* ViewController.m */,
-				245D57BD1AC189A800214FCC /* Main.storyboard */,
+				24DF0D431AC79DD7004C0677 /* Controllers */,
+				24DF0D3F1AC79B94004C0677 /* PEXAppDelegate.h */,
+				24DF0D401AC79B94004C0677 /* PEXAppDelegate.m */,
 				245D57C01AC189A800214FCC /* Images.xcassets */,
 				245D57C21AC189A800214FCC /* LaunchScreen.xib */,
 				245D57B31AC189A800214FCC /* Supporting Files */,
@@ -105,6 +104,7 @@
 			children = (
 				245D57B41AC189A800214FCC /* Info.plist */,
 				245D57B51AC189A800214FCC /* main.m */,
+				24DF0D421AC79CDF004C0677 /* PEX-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -124,6 +124,16 @@
 				245D57CE1AC189A800214FCC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		24DF0D431AC79DD7004C0677 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				24DF0D441AC79DFA004C0677 /* PEXStartupViewController.h */,
+				24DF0D451AC79DFA004C0677 /* PEXStartupViewController.m */,
+				24DF0D461AC79DFA004C0677 /* PEXStartupViewController.xib */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		6F98D2BC3E1E1C4F616758A4 /* Frameworks */ = {
@@ -225,7 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				245D57BF1AC189A800214FCC /* Main.storyboard in Resources */,
+				24DF0D481AC79DFA004C0677 /* PEXStartupViewController.xib in Resources */,
 				245D57C41AC189A800214FCC /* LaunchScreen.xib in Resources */,
 				245D57C11AC189A800214FCC /* Images.xcassets in Resources */,
 			);
@@ -278,8 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				245D57BC1AC189A800214FCC /* ViewController.m in Sources */,
-				245D57B91AC189A800214FCC /* AppDelegate.m in Sources */,
+				24DF0D411AC79B94004C0677 /* PEXAppDelegate.m in Sources */,
+				24DF0D471AC79DFA004C0677 /* PEXStartupViewController.m in Sources */,
 				245D57B61AC189A800214FCC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,14 +313,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		245D57BD1AC189A800214FCC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				245D57BE1AC189A800214FCC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		245D57C21AC189A800214FCC /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -405,6 +407,8 @@
 			baseConfigurationReference = 828ADD057E37FA889C878515 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "Plusex/PEX-Prefix.pch";
 				INFOPLIST_FILE = Plusex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -416,6 +420,8 @@
 			baseConfigurationReference = 82036DB05E576E38897072D8 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "Plusex/PEX-Prefix.pch";
 				INFOPLIST_FILE = Plusex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
