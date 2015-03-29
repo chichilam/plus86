@@ -1,5 +1,5 @@
 //
-//  PEXProjectDetai;ViewController.h
+//  PEXProjectDetailViewController.h
 //  Plusex
 //
 //  Created by rin on 2015/03/29.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PEXProjectDetai_ViewController : UIViewController
+@interface PEXProjectDetailViewController : UIViewController
 
 @end

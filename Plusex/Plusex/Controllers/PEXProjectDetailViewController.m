@@ -1,18 +1,18 @@
 //
-//  PEXProjectDetai;ViewController.m
+//  PEXProjectDetailViewController.m
 //  Plusex
 //
 //  Created by rin on 2015/03/29.
 //  Copyright (c) 2015年 rin. All rights reserved.
 //
 
-#import "PEXProjectDetai;ViewController.h"
+#import "PEXProjectDetailViewController.h"
 
-@interface PEXProjectDetai_ViewController ()
+@interface PEXProjectDetailViewController ()
 
 @end
 
-@implementation PEXProjectDetai_ViewController
+@implementation PEXProjectDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

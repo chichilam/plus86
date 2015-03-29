@@ -74,4 +74,9 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    PEXProjectDetailViewController *viewController = [[PEXProjectDetailViewController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
 @end

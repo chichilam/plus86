@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PEXProjectDetai;ViewController.h"
+#import "PEXProjectDetailViewController.h"
 
 @interface PEXProjectResutlViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 

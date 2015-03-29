@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PEXProjectDetai_ViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PEXProjectDetailViewController">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -14,7 +14,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KN2-6b-gTi">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="581-Ga-Uwq">
                     <rect key="frame" x="109" y="273" width="103" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -23,10 +23,10 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="centerX" secondItem="KN2-6b-gTi" secondAttribute="centerX" constant="-0.5" id="ToJ-n4-zL5"/>
-                <constraint firstAttribute="centerY" secondItem="KN2-6b-gTi" secondAttribute="centerY" constant="0.5" id="Ukn-Yl-I7s"/>
+                <constraint firstAttribute="centerY" secondItem="581-Ga-Uwq" secondAttribute="centerY" constant="0.5" id="fMP-9j-erD"/>
+                <constraint firstAttribute="centerX" secondItem="581-Ga-Uwq" secondAttribute="centerX" constant="-0.5" id="p0C-GQ-dyv"/>
             </constraints>
-            <point key="canvasLocation" x="233" y="405"/>
+            <point key="canvasLocation" x="233" y="333"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
