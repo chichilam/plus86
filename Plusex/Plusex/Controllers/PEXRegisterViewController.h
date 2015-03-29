@@ -1,5 +1,5 @@
 //
-//  PEXStartupViewController.h
+//  PEXRegisterViewController.h
 //  Plusex
 //
 //  Created by rin on 2015/03/29.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PEXRegisterViewController.h"
 
-@interface PEXStartupViewController : UIViewController
+@interface PEXRegisterViewController : UIViewController
 
 @end

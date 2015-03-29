@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PEXStartupViewController">
             <connections>
+                <outlet property="emailTextFiled" destination="lWk-9R-gOW" id="Vkn-j8-rsi"/>
+                <outlet property="passwordTextField" destination="3LG-xh-ypS" id="xnd-UT-rfm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -31,19 +33,25 @@
                                 <constraint firstAttribute="width" constant="200" id="8Py-FE-Rzb"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5I-RM-GCv">
                             <rect key="frame" x="137" y="349" width="46" height="30"/>
                             <state key="normal" title="Login">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="tapLoginButton:" destination="-1" eventType="touchUpInside" id="eKP-bX-WfM"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLA-Aw-CRm">
                             <rect key="frame" x="129" y="429" width="63" height="30"/>
                             <state key="normal" title="Register">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="tapRegisterButton:" destination="-1" eventType="touchUpInside" id="t0g-w2-FeP"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>

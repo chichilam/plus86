@@ -1,24 +1,18 @@
 //
-//  PEXStartupViewController.m
+//  PEXRegisterViewController.m
 //  Plusex
 //
 //  Created by rin on 2015/03/29.
 //  Copyright (c) 2015年 rin. All rights reserved.
 //
 
-#import "PEXStartupViewController.h"
+#import "PEXRegisterViewController.h"
 
-@interface PEXStartupViewController ()
-
-@property (weak, nonatomic) IBOutlet UITextField *emailTextFiled;
-@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
-
-- (IBAction)tapLoginButton:(id)sender;
-- (IBAction)tapRegisterButton:(id)sender;
+@interface PEXRegisterViewController ()
 
 @end
 
-@implementation PEXStartupViewController
+@implementation PEXRegisterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -40,13 +34,4 @@
 }
 */
 
-- (IBAction)tapLoginButton:(id)sender {
-}
-
-- (IBAction)tapRegisterButton:(id)sender {
-    PEXRegisterViewController *viewController = [[PEXRegisterViewController alloc] init];
-    
-    [self.navigationController pushViewController:viewController animated:YES];
-    
-}
 @end
