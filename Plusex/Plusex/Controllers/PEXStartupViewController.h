@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "PEXRegisterViewController.h"
+#import "PEXProjectSearchViewController.h"
+#import "PEXHumanSearchViewController.h"
+#import "PEXManagementViewController.h"
+#import "PEXUserInfoViewController.h"
 
-@interface PEXStartupViewController : UIViewController
+@interface PEXStartupViewController : UIViewController<UITextFieldDelegate>
 
 @end

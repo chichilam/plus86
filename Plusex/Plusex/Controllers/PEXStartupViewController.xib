@@ -25,7 +25,7 @@
                                 <constraint firstAttribute="width" constant="200" id="q8C-tr-M1O"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3LG-xh-ypS" userLabel="Password Text Field">
                             <rect key="frame" x="60" y="269" width="200" height="30"/>
@@ -33,7 +33,7 @@
                                 <constraint firstAttribute="width" constant="200" id="8Py-FE-Rzb"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5I-RM-GCv">
                             <rect key="frame" x="137" y="349" width="46" height="30"/>
