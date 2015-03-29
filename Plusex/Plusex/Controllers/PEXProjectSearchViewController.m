@@ -10,6 +10,7 @@
 
 @interface PEXProjectSearchViewController ()
 
+- (IBAction)tapSearchButton:(id)sender;
 @end
 
 @implementation PEXProjectSearchViewController
@@ -34,4 +35,9 @@
 }
 */
 
+- (IBAction)tapSearchButton:(id)sender {
+    //FIXME search process
+    PEXProjectResutlViewController *viewController = [[PEXProjectResutlViewController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
 @end

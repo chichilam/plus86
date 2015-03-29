@@ -1,23 +1,25 @@
 //
-//  PEXHumanSearchViewController.m
+//  PEXHumanResultViewController.m
 //  Plusex
 //
 //  Created by rin on 2015/03/29.
 //  Copyright (c) 2015年 rin. All rights reserved.
 //
 
-#import "PEXHumanSearchViewController.h"
+#import "PEXHumanResultViewController.h"
 
-@interface PEXHumanSearchViewController ()
+@interface PEXHumanResultViewController ()
 
-- (IBAction)tapSearchButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UITableView *resultTableView;
 @end
 
-@implementation PEXHumanSearchViewController
+@implementation PEXHumanResultViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [self initView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,10 +37,9 @@
 }
 */
 
-- (IBAction)tapSearchButton:(id)sender {
-    //FIXME search process
-    PEXHumanResultViewController *viewController = [[PEXHumanResultViewController alloc] init];
+#pragma mark - initial view
+-(void) initView {
     
-    [self.navigationController pushViewController:viewController animated:YES];
 }
+
 @end

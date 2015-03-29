@@ -4,8 +4,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PEXProjectSearchViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PEXHumanResultViewController">
             <connections>
+                <outlet property="resultTableView" destination="XrV-dV-uag" id="Os6-hr-8wZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,22 +15,19 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehj-wC-140">
-                    <rect key="frame" x="110" y="269" width="101" height="30"/>
-                    <state key="normal" title="Search Project">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="tapSearchButton:" destination="-1" eventType="touchUpInside" id="8ET-ci-eft"/>
-                    </connections>
-                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XrV-dV-uag">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="centerX" secondItem="ehj-wC-140" secondAttribute="centerX" constant="-0.5" id="1Fp-zs-Yx0"/>
-                <constraint firstAttribute="centerY" secondItem="ehj-wC-140" secondAttribute="centerY" id="3EW-UU-1YQ"/>
+                <constraint firstAttribute="trailing" secondItem="XrV-dV-uag" secondAttribute="trailing" id="1hn-bL-krY"/>
+                <constraint firstItem="XrV-dV-uag" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2tG-se-PyU"/>
+                <constraint firstItem="XrV-dV-uag" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ESq-XB-vjj"/>
+                <constraint firstAttribute="bottom" secondItem="XrV-dV-uag" secondAttribute="bottom" id="n3C-W6-GrN"/>
             </constraints>
-            <point key="canvasLocation" x="305" y="390"/>
+            <point key="canvasLocation" x="233" y="390"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

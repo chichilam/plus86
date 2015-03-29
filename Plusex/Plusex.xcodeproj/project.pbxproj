@@ -24,6 +24,10 @@
 		24DF0D641AC7BB83004C0677 /* PEXManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DF0D621AC7BB83004C0677 /* PEXManagementViewController.xib */; };
 		24DF0D681AC7BCCB004C0677 /* PEXUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF0D661AC7BCCB004C0677 /* PEXUserInfoViewController.m */; };
 		24DF0D691AC7BCCB004C0677 /* PEXUserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DF0D671AC7BCCB004C0677 /* PEXUserInfoViewController.xib */; };
+		24DF0D6D1AC7C303004C0677 /* PEXProjectResutlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF0D6B1AC7C303004C0677 /* PEXProjectResutlViewController.m */; };
+		24DF0D6E1AC7C303004C0677 /* PEXProjectResutlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DF0D6C1AC7C303004C0677 /* PEXProjectResutlViewController.xib */; };
+		24DF0D721AC7C32A004C0677 /* PEXHumanResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF0D701AC7C32A004C0677 /* PEXHumanResultViewController.m */; };
+		24DF0D731AC7C32A004C0677 /* PEXHumanResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DF0D711AC7C32A004C0677 /* PEXHumanResultViewController.xib */; };
 		3212ED42ED0E4EAFFEED9552 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F40DEC8359A0036A2110FC /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +71,12 @@
 		24DF0D651AC7BCCB004C0677 /* PEXUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEXUserInfoViewController.h; sourceTree = "<group>"; };
 		24DF0D661AC7BCCB004C0677 /* PEXUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEXUserInfoViewController.m; sourceTree = "<group>"; };
 		24DF0D671AC7BCCB004C0677 /* PEXUserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PEXUserInfoViewController.xib; sourceTree = "<group>"; };
+		24DF0D6A1AC7C303004C0677 /* PEXProjectResutlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEXProjectResutlViewController.h; sourceTree = "<group>"; };
+		24DF0D6B1AC7C303004C0677 /* PEXProjectResutlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEXProjectResutlViewController.m; sourceTree = "<group>"; };
+		24DF0D6C1AC7C303004C0677 /* PEXProjectResutlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PEXProjectResutlViewController.xib; sourceTree = "<group>"; };
+		24DF0D6F1AC7C32A004C0677 /* PEXHumanResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEXHumanResultViewController.h; sourceTree = "<group>"; };
+		24DF0D701AC7C32A004C0677 /* PEXHumanResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEXHumanResultViewController.m; sourceTree = "<group>"; };
+		24DF0D711AC7C32A004C0677 /* PEXHumanResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PEXHumanResultViewController.xib; sourceTree = "<group>"; };
 		82036DB05E576E38897072D8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		828ADD057E37FA889C878515 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A1F40DEC8359A0036A2110FC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,26 +164,72 @@
 		24DF0D431AC79DD7004C0677 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				24DF0D741AC7C449004C0677 /* Startup */,
+				24DF0D751AC7C463004C0677 /* Project */,
+				24DF0D761AC7C474004C0677 /* Human */,
+				24DF0D771AC7C492004C0677 /* Mangement */,
+				24DF0D781AC7C4A7004C0677 /* User */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		24DF0D741AC7C449004C0677 /* Startup */ = {
+			isa = PBXGroup;
+			children = (
 				24DF0D441AC79DFA004C0677 /* PEXStartupViewController.h */,
 				24DF0D451AC79DFA004C0677 /* PEXStartupViewController.m */,
 				24DF0D461AC79DFA004C0677 /* PEXStartupViewController.xib */,
 				24DF0D491AC7A2C6004C0677 /* PEXRegisterViewController.h */,
 				24DF0D4A1AC7A2C6004C0677 /* PEXRegisterViewController.m */,
 				24DF0D4B1AC7A2C6004C0677 /* PEXRegisterViewController.xib */,
+			);
+			name = Startup;
+			sourceTree = "<group>";
+		};
+		24DF0D751AC7C463004C0677 /* Project */ = {
+			isa = PBXGroup;
+			children = (
 				24DF0D531AC7BAC8004C0677 /* PEXProjectSearchViewController.h */,
 				24DF0D541AC7BAC8004C0677 /* PEXProjectSearchViewController.m */,
 				24DF0D551AC7BAC8004C0677 /* PEXProjectSearchViewController.xib */,
+				24DF0D6A1AC7C303004C0677 /* PEXProjectResutlViewController.h */,
+				24DF0D6B1AC7C303004C0677 /* PEXProjectResutlViewController.m */,
+				24DF0D6C1AC7C303004C0677 /* PEXProjectResutlViewController.xib */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		24DF0D761AC7C474004C0677 /* Human */ = {
+			isa = PBXGroup;
+			children = (
 				24DF0D5B1AC7BB02004C0677 /* PEXHumanSearchViewController.h */,
 				24DF0D5C1AC7BB02004C0677 /* PEXHumanSearchViewController.m */,
 				24DF0D5D1AC7BB02004C0677 /* PEXHumanSearchViewController.xib */,
+				24DF0D6F1AC7C32A004C0677 /* PEXHumanResultViewController.h */,
+				24DF0D701AC7C32A004C0677 /* PEXHumanResultViewController.m */,
+				24DF0D711AC7C32A004C0677 /* PEXHumanResultViewController.xib */,
+			);
+			name = Human;
+			sourceTree = "<group>";
+		};
+		24DF0D771AC7C492004C0677 /* Mangement */ = {
+			isa = PBXGroup;
+			children = (
 				24DF0D601AC7BB83004C0677 /* PEXManagementViewController.h */,
 				24DF0D611AC7BB83004C0677 /* PEXManagementViewController.m */,
 				24DF0D621AC7BB83004C0677 /* PEXManagementViewController.xib */,
+			);
+			name = Mangement;
+			sourceTree = "<group>";
+		};
+		24DF0D781AC7C4A7004C0677 /* User */ = {
+			isa = PBXGroup;
+			children = (
 				24DF0D651AC7BCCB004C0677 /* PEXUserInfoViewController.h */,
 				24DF0D661AC7BCCB004C0677 /* PEXUserInfoViewController.m */,
 				24DF0D671AC7BCCB004C0677 /* PEXUserInfoViewController.xib */,
 			);
-			path = Controllers;
+			name = User;
 			sourceTree = "<group>";
 		};
 		6F98D2BC3E1E1C4F616758A4 /* Frameworks */ = {
@@ -275,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24DF0D6E1AC7C303004C0677 /* PEXProjectResutlViewController.xib in Resources */,
 				24DF0D641AC7BB83004C0677 /* PEXManagementViewController.xib in Resources */,
 				24DF0D481AC79DFA004C0677 /* PEXStartupViewController.xib in Resources */,
 				245D57C41AC189A800214FCC /* LaunchScreen.xib in Resources */,
@@ -282,6 +339,7 @@
 				24DF0D571AC7BAC8004C0677 /* PEXProjectSearchViewController.xib in Resources */,
 				24DF0D691AC7BCCB004C0677 /* PEXUserInfoViewController.xib in Resources */,
 				245D57C11AC189A800214FCC /* Images.xcassets in Resources */,
+				24DF0D731AC7C32A004C0677 /* PEXHumanResultViewController.xib in Resources */,
 				24DF0D4D1AC7A2C6004C0677 /* PEXRegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,10 +395,12 @@
 				24DF0D561AC7BAC8004C0677 /* PEXProjectSearchViewController.m in Sources */,
 				24DF0D411AC79B94004C0677 /* PEXAppDelegate.m in Sources */,
 				24DF0D631AC7BB83004C0677 /* PEXManagementViewController.m in Sources */,
+				24DF0D6D1AC7C303004C0677 /* PEXProjectResutlViewController.m in Sources */,
 				24DF0D471AC79DFA004C0677 /* PEXStartupViewController.m in Sources */,
 				24DF0D681AC7BCCB004C0677 /* PEXUserInfoViewController.m in Sources */,
 				245D57B61AC189A800214FCC /* main.m in Sources */,
 				24DF0D4C1AC7A2C6004C0677 /* PEXRegisterViewController.m in Sources */,
+				24DF0D721AC7C32A004C0677 /* PEXHumanResultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

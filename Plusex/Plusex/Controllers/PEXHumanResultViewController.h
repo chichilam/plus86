@@ -1,5 +1,5 @@
 //
-//  PEXHumanSearchViewController.h
+//  PEXHumanResultViewController.h
 //  Plusex
 //
 //  Created by rin on 2015/03/29.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PEXHumanResultViewController.h"
 
-@interface PEXHumanSearchViewController : UIViewController
+@interface PEXHumanResultViewController : UIViewController
 
 @end
