@@ -91,7 +91,7 @@
     tbi2.title = @"Human";
     
     UITabBarItem *tbi3 = [tabBarController.tabBar.items objectAtIndex:2];
-    tbi3.title = @"Project";
+    tbi3.title = @"Menagemnet";
     
     UITabBarItem *tbi4 = [tabBarController.tabBar.items objectAtIndex:3];
     tbi4.title = @"User Info";
