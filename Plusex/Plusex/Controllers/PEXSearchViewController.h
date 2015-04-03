@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PEXProjectSearchViewController.h"
+#import "PEXHumanSearchViewController.h"
 
-@interface PEXSearchViewController : UIViewController
+@interface PEXSearchViewController : UIViewController<UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 @end
