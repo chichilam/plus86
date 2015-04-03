@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		244278B31ACEFBAE002867DA /* PEXTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 244278B21ACEFBAE002867DA /* PEXTabBarViewController.m */; };
+		244278BD1ACEFF72002867DA /* PEXSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 244278BB1ACEFF72002867DA /* PEXSearchViewController.m */; };
+		244278BE1ACEFF72002867DA /* PEXSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244278BC1ACEFF72002867DA /* PEXSearchViewController.xib */; };
 		245D57B61AC189A800214FCC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D57B51AC189A800214FCC /* main.m */; };
 		245D57C11AC189A800214FCC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 245D57C01AC189A800214FCC /* Images.xcassets */; };
 		245D57C41AC189A800214FCC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245D57C21AC189A800214FCC /* LaunchScreen.xib */; };
@@ -46,6 +49,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		244278B11ACEFBAE002867DA /* PEXTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEXTabBarViewController.h; sourceTree = "<group>"; };
+		244278B21ACEFBAE002867DA /* PEXTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEXTabBarViewController.m; sourceTree = "<group>"; };
+		244278BA1ACEFF72002867DA /* PEXSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEXSearchViewController.h; sourceTree = "<group>"; };
+		244278BB1ACEFF72002867DA /* PEXSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEXSearchViewController.m; sourceTree = "<group>"; };
+		244278BC1ACEFF72002867DA /* PEXSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PEXSearchViewController.xib; sourceTree = "<group>"; };
 		245D57B01AC189A800214FCC /* Plusex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plusex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		245D57B41AC189A800214FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		245D57B51AC189A800214FCC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -111,6 +119,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		244278B01ACEFB9C002867DA /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				244278B11ACEFBAE002867DA /* PEXTabBarViewController.h */,
+				244278B21ACEFBAE002867DA /* PEXTabBarViewController.m */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
+		244278B41ACEFCD5002867DA /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				244278BA1ACEFF72002867DA /* PEXSearchViewController.h */,
+				244278BB1ACEFF72002867DA /* PEXSearchViewController.m */,
+				244278BC1ACEFF72002867DA /* PEXSearchViewController.xib */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
 		245D57A71AC189A800214FCC = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +201,8 @@
 		24DF0D431AC79DD7004C0677 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				244278B41ACEFCD5002867DA /* Search */,
+				244278B01ACEFB9C002867DA /* TabBar */,
 				24DF0D741AC7C449004C0677 /* Startup */,
 				24DF0D751AC7C463004C0677 /* Project */,
 				24DF0D761AC7C474004C0677 /* Human */,
@@ -347,6 +376,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				244278BE1ACEFF72002867DA /* PEXSearchViewController.xib in Resources */,
 				24DF0D6E1AC7C303004C0677 /* PEXProjectResutlViewController.xib in Resources */,
 				24DF0D641AC7BB83004C0677 /* PEXManagementViewController.xib in Resources */,
 				24DF0D821AC7C786004C0677 /* PEXHumanDetailViewController.xib in Resources */,
@@ -409,12 +439,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				244278BD1ACEFF72002867DA /* PEXSearchViewController.m in Sources */,
 				24DF0D5E1AC7BB02004C0677 /* PEXHumanSearchViewController.m in Sources */,
 				24DF0D561AC7BAC8004C0677 /* PEXProjectSearchViewController.m in Sources */,
 				24DF0D861AC7CDB6004C0677 /* PEXProjectDetailViewController.m in Sources */,
 				24DF0D411AC79B94004C0677 /* PEXAppDelegate.m in Sources */,
 				24DF0D631AC7BB83004C0677 /* PEXManagementViewController.m in Sources */,
 				24DF0D6D1AC7C303004C0677 /* PEXProjectResutlViewController.m in Sources */,
+				244278B31ACEFBAE002867DA /* PEXTabBarViewController.m in Sources */,
 				24DF0D811AC7C786004C0677 /* PEXHumanDetailViewController.m in Sources */,
 				24DF0D471AC79DFA004C0677 /* PEXStartupViewController.m in Sources */,
 				24DF0D681AC7BCCB004C0677 /* PEXUserInfoViewController.m in Sources */,

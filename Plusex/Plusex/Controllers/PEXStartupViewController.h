@@ -12,6 +12,9 @@
 #import "PEXHumanSearchViewController.h"
 #import "PEXManagementViewController.h"
 #import "PEXUserInfoViewController.h"
+#import "PEXSearchViewController.h"
+
+#import "PEXTabBarViewController.h"
 
 @interface PEXStartupViewController : UIViewController<UITextFieldDelegate>
 

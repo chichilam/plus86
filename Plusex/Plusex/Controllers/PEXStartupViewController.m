@@ -66,11 +66,10 @@
 - (IBAction)tapLoginButton:(id)sender {
     //FIXME login process
     
-    PEXProjectSearchViewController *projectSearchViewController = [[PEXProjectSearchViewController alloc] init];
-    UINavigationController *psNavigationController = [[UINavigationController alloc] initWithRootViewController:projectSearchViewController];
+    PEXTabBarViewController *tabBarController = [[PEXTabBarViewController alloc] init];
     
-    PEXHumanSearchViewController *humanSearchViewController = [[PEXHumanSearchViewController alloc] init];
-    UINavigationController *hsNavigationController = [[UINavigationController alloc] initWithRootViewController:humanSearchViewController];
+    PEXSearchViewController *searchViewController = [[PEXSearchViewController alloc] init];
+    UINavigationController *sViewController = [[UINavigationController alloc] initWithRootViewController:searchViewController];
     
     PEXManagementViewController *managemnetViewController = [[PEXManagementViewController alloc] init];
     UINavigationController *mNavigationController = [[UINavigationController alloc] initWithRootViewController:managemnetViewController];
@@ -78,23 +77,16 @@
     PEXUserInfoViewController *userInfoViewController = [[PEXUserInfoViewController alloc] init];
     UINavigationController *uiNavigationController = [[UINavigationController alloc] initWithRootViewController:userInfoViewController];
     
-    NSArray *tabs = [NSArray arrayWithObjects:psNavigationController, hsNavigationController, mNavigationController, uiNavigationController,nil];
+    NSArray *tabs = [NSArray arrayWithObjects:sViewController, mNavigationController, uiNavigationController,nil];
     
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
     [tabBarController setViewControllers:tabs];
     tabBarController.selectedIndex = 0;
     
-    UITabBarItem *tbi1 = [tabBarController.tabBar.items objectAtIndex:0];
-    tbi1.title = @"Project";
+    UITabBarItem *tbiSearch = [tabBarController.tabBar.items objectAtIndex:0];
+    tbiSearch.title = @"Search";
     
-    UITabBarItem *tbi2 = [tabBarController.tabBar.items objectAtIndex:1];
-    tbi2.title = @"Human";
-    
-    UITabBarItem *tbi3 = [tabBarController.tabBar.items objectAtIndex:2];
-    tbi3.title = @"Menagemnet";
-    
-    UITabBarItem *tbi4 = [tabBarController.tabBar.items objectAtIndex:3];
-    tbi4.title = @"User Info";
+    UITabBarItem *tbiInfo = [tabBarController.tabBar.items objectAtIndex:2];
+    tbiInfo.title = @"User Info";
     
     [self.navigationController presentViewController:tabBarController animated:YES completion:nil];
 }
