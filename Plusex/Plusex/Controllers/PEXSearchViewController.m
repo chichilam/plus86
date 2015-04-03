@@ -10,13 +10,24 @@
 
 @interface PEXSearchViewController ()
 
-@property (retain, nonatomic) NSArray *pages;
 @property (strong, nonatomic) UIPageViewController *pageController;
+@property (retain, nonatomic) NSArray *pages;
 
 @end
 
+static PEXSearchViewController* shardManager = nil;
+
 @implementation PEXSearchViewController {
     Boolean isFirstRun;
+}
+
++ (PEXSearchViewController*) shardManager
+{
+    if (!shardManager) {
+        shardManager = [[PEXSearchViewController alloc] init];
+    }
+    
+    return shardManager;
 }
 
 - (void)viewDidLoad {
@@ -24,6 +35,8 @@
     // Do any additional setup after loading the view from its nib.
     
     isFirstRun = YES;
+    
+    shardManager = self;
 }
 
 -(void) viewDidAppear:(BOOL)animated {
@@ -101,6 +114,20 @@
     } else {
         return nil;                                                         // do nothing
     }
+}
+
+-(void) scrollPageController:(UIPageViewControllerNavigationDirection) direction {
+    
+    if(direction == UIPageViewControllerNavigationDirectionForward) {
+        NSArray *viewControllers = [NSArray arrayWithObject:[self.pages objectAtIndex:1]];
+        
+        [self.pageController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+    } else {
+        NSArray *viewControllers = [NSArray arrayWithObject:[self.pages objectAtIndex:0]];
+        
+        [self.pageController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
+    }
+    
 }
 
 @end

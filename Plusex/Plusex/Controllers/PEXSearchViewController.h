@@ -12,4 +12,8 @@
 
 @interface PEXSearchViewController : UIViewController<UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
++ (PEXSearchViewController*) shardManager;
+
+-(void) scrollPageController:(UIPageViewControllerNavigationDirection) direction;
+
 @end

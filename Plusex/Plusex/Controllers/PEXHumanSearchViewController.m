@@ -10,6 +10,7 @@
 
 @interface PEXHumanSearchViewController ()
 
+- (IBAction)tapProjectButton:(id)sender;
 - (IBAction)tapSearchButton:(id)sender;
 @end
 
@@ -34,6 +35,10 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)tapProjectButton:(id)sender {
+    [[PEXSearchViewController shardManager] scrollPageController:UIPageViewControllerNavigationDirectionReverse];
+}
 
 - (IBAction)tapSearchButton:(id)sender {
     //FIXME search process

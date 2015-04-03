@@ -14,20 +14,58 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDx-bT-Fcd">
-                    <rect key="frame" x="109" y="269" width="102" height="30"/>
-                    <state key="normal" title="Search Human">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVE-7i-1qm">
+                    <rect key="frame" x="0.0" y="458" width="320" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDx-bT-Fcd">
+                            <rect key="frame" x="109" y="5" width="102" height="30"/>
+                            <state key="normal" title="Search Human">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tapSearchButton:" destination="-1" eventType="touchUpInside" id="Blh-sQ-YSj"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="601-zS-eUE"/>
+                        <constraint firstAttribute="centerY" secondItem="iDx-bT-Fcd" secondAttribute="centerY" id="KMc-Ck-W3b"/>
+                        <constraint firstAttribute="centerX" secondItem="iDx-bT-Fcd" secondAttribute="centerX" id="VIH-K0-Z6z"/>
+                        <constraint firstAttribute="width" constant="320" id="sWK-J9-oAL"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MHV-qH-bCI">
+                    <rect key="frame" x="8" y="64" width="304" height="394"/>
+                    <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOB-cZ-5cZ">
+                    <rect key="frame" x="8" y="234" width="20" height="100"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="W0b-rP-95F"/>
+                        <constraint firstAttribute="width" constant="20" id="XAP-GG-5NX"/>
+                    </constraints>
+                    <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="←">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="tapSearchButton:" destination="-1" eventType="touchUpInside" id="Blh-sQ-YSj"/>
+                        <action selector="tapProjectButton:" destination="-1" eventType="touchUpInside" id="YRS-3o-4VV"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="centerX" secondItem="iDx-bT-Fcd" secondAttribute="centerX" id="2Jq-hk-bar"/>
-                <constraint firstAttribute="centerY" secondItem="iDx-bT-Fcd" secondAttribute="centerY" id="o9y-eX-1pZ"/>
+                <constraint firstItem="HVE-7i-1qm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="58W-HN-Shw"/>
+                <constraint firstAttribute="trailing" secondItem="HVE-7i-1qm" secondAttribute="trailing" id="8LR-QB-k5O"/>
+                <constraint firstItem="MHV-qH-bCI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="DDU-oT-axp"/>
+                <constraint firstAttribute="centerY" secondItem="iOB-cZ-5cZ" secondAttribute="centerY" id="FAc-9g-hMa"/>
+                <constraint firstItem="MHV-qH-bCI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="WGZ-qA-NmE"/>
+                <constraint firstItem="HVE-7i-1qm" firstAttribute="top" secondItem="MHV-qH-bCI" secondAttribute="bottom" id="Yiu-FO-MgP"/>
+                <constraint firstAttribute="trailing" secondItem="MHV-qH-bCI" secondAttribute="trailing" constant="8" id="g2I-fm-QvJ"/>
+                <constraint firstItem="iOB-cZ-5cZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="pAE-wE-g0T"/>
+                <constraint firstAttribute="bottom" secondItem="HVE-7i-1qm" secondAttribute="bottom" constant="70" id="pXR-uu-fmC"/>
             </constraints>
             <point key="canvasLocation" x="305" y="390"/>
         </view>

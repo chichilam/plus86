@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PEXHumanResultViewController.h"
+#import "PEXSearchViewController.h"
 
 @interface PEXHumanSearchViewController : UIViewController
 

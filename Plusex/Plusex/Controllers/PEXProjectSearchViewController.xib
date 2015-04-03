@@ -14,20 +14,57 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehj-wC-140">
-                    <rect key="frame" x="110" y="269" width="101" height="30"/>
-                    <state key="normal" title="Search Project">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rnC-cW-hpL">
+                    <rect key="frame" x="0.0" y="458" width="320" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehj-wC-140">
+                            <rect key="frame" x="110" y="5" width="101" height="30"/>
+                            <state key="normal" title="Search Project">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tapSearchButton:" destination="-1" eventType="touchUpInside" id="8ET-ci-eft"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="KcN-Nq-VWT"/>
+                        <constraint firstAttribute="centerX" secondItem="ehj-wC-140" secondAttribute="centerX" constant="-0.5" id="KhV-u6-cYJ"/>
+                        <constraint firstAttribute="centerY" secondItem="ehj-wC-140" secondAttribute="centerY" id="b8p-wL-FOv"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iao-Pu-eRx">
+                    <rect key="frame" x="8" y="64" width="304" height="394"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fx0-Qy-uio">
+                    <rect key="frame" x="292" y="234" width="20" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="CAl-7o-quw"/>
+                        <constraint firstAttribute="width" constant="20" id="u5K-Mq-kHT"/>
+                    </constraints>
+                    <state key="normal" title="→">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="tapSearchButton:" destination="-1" eventType="touchUpInside" id="8ET-ci-eft"/>
+                        <action selector="tapHumanButton:" destination="-1" eventType="touchUpInside" id="fKB-6g-T1f"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="centerX" secondItem="ehj-wC-140" secondAttribute="centerX" constant="-0.5" id="1Fp-zs-Yx0"/>
-                <constraint firstAttribute="centerY" secondItem="ehj-wC-140" secondAttribute="centerY" id="3EW-UU-1YQ"/>
+                <constraint firstItem="rnC-cW-hpL" firstAttribute="top" secondItem="iao-Pu-eRx" secondAttribute="bottom" id="45P-8V-cQp"/>
+                <constraint firstItem="iao-Pu-eRx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="9QO-Xq-Wcb"/>
+                <constraint firstAttribute="bottom" secondItem="rnC-cW-hpL" secondAttribute="bottom" constant="70" id="BvY-fe-VJh"/>
+                <constraint firstAttribute="centerY" secondItem="fx0-Qy-uio" secondAttribute="centerY" id="HfP-CQ-5fj"/>
+                <constraint firstAttribute="trailing" secondItem="fx0-Qy-uio" secondAttribute="trailing" constant="8" id="KpO-N1-bY8"/>
+                <constraint firstItem="iao-Pu-eRx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Ota-JV-qQV"/>
+                <constraint firstAttribute="trailing" secondItem="rnC-cW-hpL" secondAttribute="trailing" id="bIF-gT-qp8"/>
+                <constraint firstItem="rnC-cW-hpL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="h92-1V-xbj"/>
+                <constraint firstAttribute="trailing" secondItem="iao-Pu-eRx" secondAttribute="trailing" constant="8" id="mrs-Mx-CrV"/>
             </constraints>
             <point key="canvasLocation" x="305" y="390"/>
         </view>
