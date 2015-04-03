@@ -53,11 +53,13 @@
 
 -(void) initPageViewController {
     PEXProjectSearchViewController *projectSearchViewController = [[PEXProjectSearchViewController alloc] init];
+    UINavigationController *pNavigationController = [[UINavigationController alloc] initWithRootViewController:projectSearchViewController];
     
     PEXHumanSearchViewController *humanSeachViewController = [[PEXHumanSearchViewController alloc] init];
+    UINavigationController *hNaviagtionController = [[UINavigationController alloc] initWithRootViewController:humanSeachViewController];
     
     // load the view controllers in our pages array
-    self.pages = [[NSArray alloc] initWithObjects:projectSearchViewController, humanSeachViewController, nil];
+    self.pages = [[NSArray alloc] initWithObjects:pNavigationController, hNaviagtionController, nil];
     
     self.pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     [self.pageController setDelegate:self];

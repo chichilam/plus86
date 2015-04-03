@@ -69,7 +69,7 @@
     PEXTabBarViewController *tabBarController = [[PEXTabBarViewController alloc] init];
     
     PEXSearchViewController *searchViewController = [[PEXSearchViewController alloc] init];
-    UINavigationController *sViewController = [[UINavigationController alloc] initWithRootViewController:searchViewController];
+//    UINavigationController *sViewController = [[UINavigationController alloc] initWithRootViewController:searchViewController];
     
     PEXManagementViewController *managemnetViewController = [[PEXManagementViewController alloc] init];
     UINavigationController *mNavigationController = [[UINavigationController alloc] initWithRootViewController:managemnetViewController];
@@ -77,7 +77,7 @@
     PEXUserInfoViewController *userInfoViewController = [[PEXUserInfoViewController alloc] init];
     UINavigationController *uiNavigationController = [[UINavigationController alloc] initWithRootViewController:userInfoViewController];
     
-    NSArray *tabs = [NSArray arrayWithObjects:sViewController, mNavigationController, uiNavigationController,nil];
+    NSArray *tabs = [NSArray arrayWithObjects:searchViewController, mNavigationController, uiNavigationController,nil];
     
     [tabBarController setViewControllers:tabs];
     tabBarController.selectedIndex = 0;
