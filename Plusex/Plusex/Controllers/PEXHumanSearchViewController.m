@@ -41,9 +41,6 @@
 }
 
 - (IBAction)tapSearchButton:(id)sender {
-    //FIXME search process
-    PEXHumanResultViewController *viewController = [[PEXHumanResultViewController alloc] init];
-    
-    [self.navigationController pushViewController:viewController animated:YES];
+    [self.humanSearchViewControllerDelegate searchHumanWithCondition:nil];
 }
 @end

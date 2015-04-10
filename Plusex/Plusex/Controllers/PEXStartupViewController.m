@@ -76,12 +76,12 @@
     //    UINavigationController *sViewController = [[UINavigationController alloc] initWithRootViewController:searchViewController];
     
     PEXManagementViewController *managemnetViewController = [[PEXManagementViewController alloc] init];
-    UINavigationController *mNavigationController = [[UINavigationController alloc] initWithRootViewController:managemnetViewController];
+//    UINavigationController *mNavigationController = [[UINavigationController alloc] initWithRootViewController:managemnetViewController];
     
     PEXUserInfoViewController *userInfoViewController = [[PEXUserInfoViewController alloc] init];
-    UINavigationController *uiNavigationController = [[UINavigationController alloc] initWithRootViewController:userInfoViewController];
+//    UINavigationController *uiNavigationController = [[UINavigationController alloc] initWithRootViewController:userInfoViewController];
     
-    NSArray *tabs = [NSArray arrayWithObjects:searchViewController, mNavigationController, uiNavigationController,nil];
+    NSArray *tabs = [NSArray arrayWithObjects:searchViewController, managemnetViewController, userInfoViewController,nil];
     
     [tabBarController setViewControllers:tabs];
     tabBarController.selectedIndex = 0;
@@ -92,7 +92,9 @@
     UITabBarItem *tbiInfo = [tabBarController.tabBar.items objectAtIndex:2];
     tbiInfo.title = @"User Info";
     
-    [self.navigationController presentViewController:tabBarController animated:YES completion:nil];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:tabBarController];
+    
+    [self.navigationController presentViewController:navigationController animated:YES completion:nil];
 }
 
 #pragma mark - tap regitster button

@@ -10,6 +10,16 @@
 #import "PEXHumanResultViewController.h"
 #import "PEXSearchViewController.h"
 
+@protocol PEXHumanSearchViewControllerDelegate <NSObject>
+
+@required
+
+-(void) searchHumanWithCondition:(NSDictionary*) condition;
+
+@end
+
 @interface PEXHumanSearchViewController : UIViewController
+
+@property (weak, nonatomic) id <PEXHumanSearchViewControllerDelegate> humanSearchViewControllerDelegate;
 
 @end

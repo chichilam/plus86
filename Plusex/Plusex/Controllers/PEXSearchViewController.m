@@ -8,7 +8,7 @@
 
 #import "PEXSearchViewController.h"
 
-@interface PEXSearchViewController ()
+@interface PEXSearchViewController ()<PEXProjectSearchViewControllerDelegate,PEXHumanSearchViewControllerDelegate>
 
 @property (strong, nonatomic) UIPageViewController *pageController;
 @property (retain, nonatomic) NSArray *pages;
@@ -66,13 +66,13 @@ static PEXSearchViewController* shardManager = nil;
 
 -(void) initPageViewController {
     PEXProjectSearchViewController *projectSearchViewController = [[PEXProjectSearchViewController alloc] init];
-    UINavigationController *pNavigationController = [[UINavigationController alloc] initWithRootViewController:projectSearchViewController];
+    projectSearchViewController.projectSearchViewControllerDelegate = self;
     
     PEXHumanSearchViewController *humanSeachViewController = [[PEXHumanSearchViewController alloc] init];
-    UINavigationController *hNaviagtionController = [[UINavigationController alloc] initWithRootViewController:humanSeachViewController];
+    humanSeachViewController.humanSearchViewControllerDelegate = self;
     
     // load the view controllers in our pages array
-    self.pages = [[NSArray alloc] initWithObjects:pNavigationController, hNaviagtionController, nil];
+    self.pages = [[NSArray alloc] initWithObjects:projectSearchViewController, humanSeachViewController, nil];
     
     self.pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     [self.pageController setDelegate:self];
@@ -128,6 +128,22 @@ static PEXSearchViewController* shardManager = nil;
         [self.pageController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
     }
     
+}
+
+#pragma mark PEXProjectSearchViewControllerDelegate
+-(void) searchProjectWithCondition:(NSDictionary *)condition {
+    
+    PEXProjectResutlViewController *viewController = [[PEXProjectResutlViewController alloc] init];
+    
+    [self.tabBarController.navigationController pushViewController:viewController animated:YES];
+}
+
+#pragma mark PEXHumanSearchViewControllerDelegate 
+-(void) searchHumanWithCondition:(NSDictionary *)condition {
+    PEXHumanResultViewController *viewController = [[PEXHumanResultViewController alloc] init];
+    
+    [self.tabBarController.navigationController pushViewController:viewController animated:YES];
+
 }
 
 @end

@@ -10,6 +10,15 @@
 #import "PEXProjectResutlViewController.h"
 #import "PEXSearchViewController.h"
 
+@protocol PEXProjectSearchViewControllerDelegate <NSObject>
+
+@required
+-(void) searchProjectWithCondition:(NSDictionary*) condition;
+
+@end
+
 @interface PEXProjectSearchViewController : UIViewController
+
+@property (weak, nonatomic) id <PEXProjectSearchViewControllerDelegate> projectSearchViewControllerDelegate;
 
 @end
