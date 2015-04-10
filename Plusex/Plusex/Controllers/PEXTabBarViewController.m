@@ -39,25 +39,57 @@
 // Create a custom UIButton and add it to the center of our tab bar
 - (void)addCenterButtonWithImage:(UIImage *)buttonImage highlightImage:(UIImage *)highlightImage target:(id)target action:(SEL)action
 {
-    UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin;
-    button.frame = CGRectMake(0.0, 0.0, buttonImage.size.width, buttonImage.size.height);
-    [button setBackgroundImage:buttonImage forState:UIControlStateNormal];
-    [button setBackgroundImage:highlightImage forState:UIControlStateHighlighted];
     
-    CGFloat heightDifference = buttonImage.size.height - self.tabBar.frame.size.height;
-    if (heightDifference < 0) {
-        button.center = self.tabBar.center;
-    } else {
-        CGPoint center = self.tabBar.center;
-        center.y = center.y - heightDifference/2.0;
-        button.center = center;
-    }
+    CGRect rect = [[[UIApplication sharedApplication] delegate] window].bounds;
     
-    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    UIImage *storyMenuItemImage = [UIImage imageNamed:@"bg-menuitem.png"];
+    UIImage *storyMenuItemImagePressed = [UIImage imageNamed:@"bg-menuitem-highlighted.png"];
     
-    [self.view addSubview:button];
-    self.centerButton = button;
+    UIImage *starImage = [UIImage imageNamed:@"icon-star.png"];
+    
+    AwesomeMenuItem *starMenuItem1 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage
+                                                           highlightedImage:storyMenuItemImagePressed
+                                                               ContentImage:starImage
+                                                    highlightedContentImage:nil];
+    AwesomeMenuItem *starMenuItem2 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage
+                                                           highlightedImage:storyMenuItemImagePressed
+                                                               ContentImage:starImage
+                                                    highlightedContentImage:nil];
+    AwesomeMenuItem *starMenuItem3 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage
+                                                           highlightedImage:storyMenuItemImagePressed
+                                                               ContentImage:starImage
+                                                    highlightedContentImage:nil];
+    
+    AwesomeMenuItem *startItem = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"bg-addbutton.png"]
+                                                       highlightedImage:[UIImage imageNamed:@"bg-addbutton-highlighted.png"]
+                                                           ContentImage:[UIImage imageNamed:@"icon-plus.png"]
+                                                highlightedContentImage:[UIImage imageNamed:@"icon-plus-highlighted.png"]];
+    
+    NSArray *menuItems = [NSArray arrayWithObjects:starMenuItem1, starMenuItem2, starMenuItem3, nil];
+    
+    AwesomeMenu *menu = [[AwesomeMenu alloc] initWithFrame:rect startItem:startItem menuItems:menuItems];
+    menu.delegate = self;
+    
+    menu.rotateAngle = -0.75;
+    menu.menuWholeAngle = M_PI_2;
+    menu.farRadius = 110.0f; //展開距離
+    menu.endRadius = 100.0f; //ボタン距離
+    menu.nearRadius = 90.0f; //集中距離
+    menu.animationDuration = 0.3f;
+    menu.startPoint = CGPointMake(rect.size.width/2, rect.size.height - 25); //center of plus button
+    
+    [self.view addSubview:menu];
+}
+
+- (void)awesomeMenu:(AwesomeMenu *)menu didSelectIndex:(NSInteger)idx
+{
+    NSLog(@"Select the index : %ld",(long)idx);
+}
+- (void)awesomeMenuDidFinishAnimationClose:(AwesomeMenu *)menu {
+    NSLog(@"Menu was closed!");
+}
+- (void)awesomeMenuDidFinishAnimationOpen:(AwesomeMenu *)menu {
+    NSLog(@"Menu is open!");
 }
 
 - (void)buttonPressed:(id)sender
@@ -77,17 +109,19 @@
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
 {
     if(self.tabBarController.selectedIndex != 2){
-        [self performSelector:@selector(doNotHighlight:) withObject:self.centerButton afterDelay:0];
+//        [self performSelector:@selector(doNotHighlight:) withObject:self.centerButton afterDelay:0];
     }
 }
 
 - (BOOL)tabBarHidden {
-    return self.centerButton.hidden && self.tabBar.hidden;
+//    return self.centerButton.hidden && self.tabBar.hidden;
+    
+    return self.tabBar.hidden;
 }
 
 - (void)setTabBarHidden:(BOOL)tabBarHidden
 {
-    self.centerButton.hidden = tabBarHidden;
+//    self.centerButton.hidden = tabBarHidden;
     self.tabBar.hidden = tabBarHidden;
 }
 

@@ -14,6 +14,8 @@
 		245D57C11AC189A800214FCC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 245D57C01AC189A800214FCC /* Images.xcassets */; };
 		245D57C41AC189A800214FCC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245D57C21AC189A800214FCC /* LaunchScreen.xib */; };
 		245D57D01AC189A800214FCC /* PlusexTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D57CF1AC189A800214FCC /* PlusexTests.m */; };
+		24DD78A81AD8161300B4352A /* AwesomeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD78A51AD8161300B4352A /* AwesomeMenu.m */; };
+		24DD78A91AD8161300B4352A /* AwesomeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD78A71AD8161300B4352A /* AwesomeMenuItem.m */; };
 		24DF0D411AC79B94004C0677 /* PEXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF0D401AC79B94004C0677 /* PEXAppDelegate.m */; };
 		24DF0D471AC79DFA004C0677 /* PEXStartupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF0D451AC79DFA004C0677 /* PEXStartupViewController.m */; };
 		24DF0D481AC79DFA004C0677 /* PEXStartupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DF0D461AC79DFA004C0677 /* PEXStartupViewController.xib */; };
@@ -62,6 +64,10 @@
 		245D57C91AC189A800214FCC /* PlusexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlusexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		245D57CE1AC189A800214FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		245D57CF1AC189A800214FCC /* PlusexTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlusexTests.m; sourceTree = "<group>"; };
+		24DD78A41AD8161300B4352A /* AwesomeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenu.h; sourceTree = "<group>"; };
+		24DD78A51AD8161300B4352A /* AwesomeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenu.m; sourceTree = "<group>"; };
+		24DD78A61AD8161300B4352A /* AwesomeMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenuItem.h; sourceTree = "<group>"; };
+		24DD78A71AD8161300B4352A /* AwesomeMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenuItem.m; sourceTree = "<group>"; };
 		24DF0D3F1AC79B94004C0677 /* PEXAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEXAppDelegate.h; sourceTree = "<group>"; };
 		24DF0D401AC79B94004C0677 /* PEXAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEXAppDelegate.m; sourceTree = "<group>"; };
 		24DF0D421AC79CDF004C0677 /* PEX-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PEX-Prefix.pch"; sourceTree = "<group>"; };
@@ -161,6 +167,7 @@
 		245D57B21AC189A800214FCC /* Plusex */ = {
 			isa = PBXGroup;
 			children = (
+				24DD78A21AD815D300B4352A /* Lib */,
 				24DF0D431AC79DD7004C0677 /* Controllers */,
 				24DF0D3F1AC79B94004C0677 /* PEXAppDelegate.h */,
 				24DF0D401AC79B94004C0677 /* PEXAppDelegate.m */,
@@ -196,6 +203,25 @@
 				245D57CE1AC189A800214FCC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		24DD78A21AD815D300B4352A /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				24DD78A31AD815FA00B4352A /* AwesomeMenu */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		24DD78A31AD815FA00B4352A /* AwesomeMenu */ = {
+			isa = PBXGroup;
+			children = (
+				24DD78A41AD8161300B4352A /* AwesomeMenu.h */,
+				24DD78A51AD8161300B4352A /* AwesomeMenu.m */,
+				24DD78A61AD8161300B4352A /* AwesomeMenuItem.h */,
+				24DD78A71AD8161300B4352A /* AwesomeMenuItem.m */,
+			);
+			name = AwesomeMenu;
 			sourceTree = "<group>";
 		};
 		24DF0D431AC79DD7004C0677 /* Controllers */ = {
@@ -440,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				244278BD1ACEFF72002867DA /* PEXSearchViewController.m in Sources */,
+				24DD78A91AD8161300B4352A /* AwesomeMenuItem.m in Sources */,
 				24DF0D5E1AC7BB02004C0677 /* PEXHumanSearchViewController.m in Sources */,
 				24DF0D561AC7BAC8004C0677 /* PEXProjectSearchViewController.m in Sources */,
 				24DF0D861AC7CDB6004C0677 /* PEXProjectDetailViewController.m in Sources */,
@@ -451,6 +478,7 @@
 				24DF0D471AC79DFA004C0677 /* PEXStartupViewController.m in Sources */,
 				24DF0D681AC7BCCB004C0677 /* PEXUserInfoViewController.m in Sources */,
 				245D57B61AC189A800214FCC /* main.m in Sources */,
+				24DD78A81AD8161300B4352A /* AwesomeMenu.m in Sources */,
 				24DF0D4C1AC7A2C6004C0677 /* PEXRegisterViewController.m in Sources */,
 				24DF0D721AC7C32A004C0677 /* PEXHumanResultViewController.m in Sources */,
 			);

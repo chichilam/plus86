@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AwesomeMenu.h"
 
-@interface PEXTabBarViewController : UITabBarController
+@interface PEXTabBarViewController : UITabBarController<AwesomeMenuDelegate>
 
 @property(nonatomic, assign) BOOL tabBarHidden;
 
 -(void)addCenterButtonWithImage:(UIImage *)buttonImage highlightImage:(UIImage *)highlightImage target:(id)target action:(SEL)action;
 
-@property(nonatomic, weak) IBOutlet UIButton *centerButton;
+//@property(nonatomic, weak) IBOutlet UIButton *centerButton;
+
+@property (weak, nonatomic) AwesomeMenu *menu;
 
 @end
