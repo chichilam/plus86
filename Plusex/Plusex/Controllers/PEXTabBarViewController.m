@@ -81,7 +81,18 @@
 
 - (void)awesomeMenu:(AwesomeMenu *)menu didSelectIndex:(NSInteger)idx
 {
-    NSLog(@"Select the index : %ld",(long)idx);
+
+    if(idx == 0) {
+        
+    }
+    
+    if(idx == 1) {
+        
+    }
+    
+    if(idx == 2) {
+        [self setSelectedIndex:1];
+    }
 }
 - (void)awesomeMenuDidFinishAnimationClose:(AwesomeMenu *)menu {
     NSLog(@"Menu was closed!");
