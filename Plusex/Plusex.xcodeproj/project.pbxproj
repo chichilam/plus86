@@ -14,6 +14,8 @@
 		245D57C11AC189A800214FCC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 245D57C01AC189A800214FCC /* Images.xcassets */; };
 		245D57C41AC189A800214FCC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245D57C21AC189A800214FCC /* LaunchScreen.xib */; };
 		245D57D01AC189A800214FCC /* PlusexTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D57CF1AC189A800214FCC /* PlusexTests.m */; };
+		24BE00D91AD8402800FFF239 /* PEXIntroduceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BE00D71AD8402800FFF239 /* PEXIntroduceViewController.m */; };
+		24BE00DA1AD8402800FFF239 /* PEXIntroduceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BE00D81AD8402800FFF239 /* PEXIntroduceViewController.xib */; };
 		24DD78A81AD8161300B4352A /* AwesomeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD78A51AD8161300B4352A /* AwesomeMenu.m */; };
 		24DD78A91AD8161300B4352A /* AwesomeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD78A71AD8161300B4352A /* AwesomeMenuItem.m */; };
 		24DF0D411AC79B94004C0677 /* PEXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF0D401AC79B94004C0677 /* PEXAppDelegate.m */; };
@@ -68,6 +70,9 @@
 		245D57C91AC189A800214FCC /* PlusexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlusexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		245D57CE1AC189A800214FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		245D57CF1AC189A800214FCC /* PlusexTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlusexTests.m; sourceTree = "<group>"; };
+		24BE00D61AD8402800FFF239 /* PEXIntroduceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEXIntroduceViewController.h; sourceTree = "<group>"; };
+		24BE00D71AD8402800FFF239 /* PEXIntroduceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEXIntroduceViewController.m; sourceTree = "<group>"; };
+		24BE00D81AD8402800FFF239 /* PEXIntroduceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PEXIntroduceViewController.xib; sourceTree = "<group>"; };
 		24DD78A41AD8161300B4352A /* AwesomeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenu.h; sourceTree = "<group>"; };
 		24DD78A51AD8161300B4352A /* AwesomeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenu.m; sourceTree = "<group>"; };
 		24DD78A61AD8161300B4352A /* AwesomeMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenuItem.h; sourceTree = "<group>"; };
@@ -215,11 +220,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		24BE00D41AD82C8E00FFF239 /* Common */ = {
+		24BE00D51AD83FEC00FFF239 /* Introduce */ = {
 			isa = PBXGroup;
 			children = (
+				24BE00D61AD8402800FFF239 /* PEXIntroduceViewController.h */,
+				24BE00D71AD8402800FFF239 /* PEXIntroduceViewController.m */,
+				24BE00D81AD8402800FFF239 /* PEXIntroduceViewController.xib */,
 			);
-			name = Common;
+			name = Introduce;
 			sourceTree = "<group>";
 		};
 		24DD78A21AD815D300B4352A /* Lib */ = {
@@ -244,7 +252,7 @@
 		24DF0D431AC79DD7004C0677 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				24BE00D41AD82C8E00FFF239 /* Common */,
+				24BE00D51AD83FEC00FFF239 /* Introduce */,
 				244278B41ACEFCD5002867DA /* Search */,
 				244278B01ACEFB9C002867DA /* TabBar */,
 				24DF0D741AC7C449004C0677 /* Startup */,
@@ -434,6 +442,7 @@
 				24DF0D821AC7C786004C0677 /* PEXHumanDetailViewController.xib in Resources */,
 				24DF0D481AC79DFA004C0677 /* PEXStartupViewController.xib in Resources */,
 				245D57C41AC189A800214FCC /* LaunchScreen.xib in Resources */,
+				24BE00DA1AD8402800FFF239 /* PEXIntroduceViewController.xib in Resources */,
 				24DF0D5F1AC7BB02004C0677 /* PEXHumanSearchViewController.xib in Resources */,
 				24DF0D571AC7BAC8004C0677 /* PEXProjectSearchViewController.xib in Resources */,
 				24DF0D691AC7BCCB004C0677 /* PEXUserInfoViewController.xib in Resources */,
@@ -500,6 +509,7 @@
 				24DF0D631AC7BB83004C0677 /* PEXManagementViewController.m in Sources */,
 				24DF0D6D1AC7C303004C0677 /* PEXProjectResutlViewController.m in Sources */,
 				24E6506B1AD81DFB005DFA69 /* PEXHumanAddViewController.m in Sources */,
+				24BE00D91AD8402800FFF239 /* PEXIntroduceViewController.m in Sources */,
 				24E650661AD81DC6005DFA69 /* PEXProjectAddViewController.m in Sources */,
 				244278B31ACEFBAE002867DA /* PEXTabBarViewController.m in Sources */,
 				24DF0D811AC7C786004C0677 /* PEXHumanDetailViewController.m in Sources */,

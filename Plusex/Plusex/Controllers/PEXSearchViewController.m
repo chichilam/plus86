@@ -10,43 +10,25 @@
 
 @interface PEXSearchViewController ()<PEXProjectSearchViewControllerDelegate,PEXHumanSearchViewControllerDelegate>
 
-@property (strong, nonatomic) UIPageViewController *pageController;
-@property (retain, nonatomic) NSArray *pages;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *titleSegmentedControl;
+@property (strong, nonatomic) IBOutlet UIView *controllerView;
+
+- (IBAction)changeSegmentedControll:(id)sender;
+
+@property (strong, nonatomic) PEXProjectSearchViewController *projectSearchViewController;
+@property (strong, nonatomic) PEXHumanSearchViewController *humanSeachViewController;
+@property (strong, nonatomic) PEXIntroduceViewController *introduceViewContoller;
 
 @end
 
-static PEXSearchViewController* shardManager = nil;
 
-@implementation PEXSearchViewController {
-    Boolean isFirstRun;
-}
-
-+ (PEXSearchViewController*) shardManager
-{
-    if (!shardManager) {
-        shardManager = [[PEXSearchViewController alloc] init];
-    }
-    
-    return shardManager;
-}
+@implementation PEXSearchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    isFirstRun = YES;
-    
-    shardManager = self;
-}
-
--(void) viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    if(isFirstRun) {
-        isFirstRun = !isFirstRun;
-        
-        [self initPageViewController];
-    }
+     [self initViewController];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,70 +46,28 @@ static PEXSearchViewController* shardManager = nil;
 }
 */
 
--(void) initPageViewController {
-    PEXProjectSearchViewController *projectSearchViewController = [[PEXProjectSearchViewController alloc] init];
-    projectSearchViewController.projectSearchViewControllerDelegate = self;
+-(void) initViewController {
+    self.projectSearchViewController = [[PEXProjectSearchViewController alloc] init];
+    self.projectSearchViewController.projectSearchViewControllerDelegate = self;
+    [self addChildViewController:self.projectSearchViewController];
+    [self.projectSearchViewController didMoveToParentViewController:self];
+    self.projectSearchViewController.view.frame = self.controllerView.bounds;
+    [self.controllerView addSubview:self.projectSearchViewController.view];
     
-    PEXHumanSearchViewController *humanSeachViewController = [[PEXHumanSearchViewController alloc] init];
-    humanSeachViewController.humanSearchViewControllerDelegate = self;
+    self.humanSeachViewController = [[PEXHumanSearchViewController alloc] init];
+    self.humanSeachViewController.humanSearchViewControllerDelegate = self;
+    self.humanSeachViewController.view.hidden = YES;
+    [self addChildViewController:self.humanSeachViewController];
+    [self.humanSeachViewController didMoveToParentViewController:self];
+    self.humanSeachViewController.view.frame = self.controllerView.bounds;
+    [self.controllerView addSubview:self.humanSeachViewController.view];
     
-    // load the view controllers in our pages array
-    self.pages = [[NSArray alloc] initWithObjects:projectSearchViewController, humanSeachViewController, nil];
-    
-    self.pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-    [self.pageController setDelegate:self];
-    [self.pageController setDataSource:self];
-    
-    [[self.pageController view] setFrame:[[self view] bounds]];
-    NSArray *viewControllers = [NSArray arrayWithObject:[self.pages objectAtIndex:0]];
-    
-    [self.pageController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-    
-    [self addChildViewController:self.pageController];
-    
-    [[self view] addSubview:[self.pageController view]];
-    [self.pageController didMoveToParentViewController:self];
-    
-    [self.view sendSubviewToBack:[self.pageController view]];
-}
-
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
-    
-    NSUInteger currentIndex = [self.pages indexOfObject:viewController];    // get the index of the current view controller on display
-    
-    // check if we are at the end and decide if we need to present the next viewcontroller
-    if ( currentIndex < [self.pages count]-1) {
-        return [self.pages objectAtIndex:currentIndex+1];                   // return the next view controller
-    } else {
-        return nil;                                                         // do nothing
-    }
-}
-
-
-- (UIViewController *) pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
-    
-    NSUInteger currentIndex = [self.pages indexOfObject:viewController];    // get the index of the current view controller on display
-    
-    // check if we are at the beginning and decide if we need to present the previous viewcontroller
-    if ( currentIndex > 0) {
-        return [self.pages objectAtIndex:currentIndex-1];                   // return the previous viewcontroller
-    } else {
-        return nil;                                                         // do nothing
-    }
-}
-
--(void) scrollPageController:(UIPageViewControllerNavigationDirection) direction {
-    
-    if(direction == UIPageViewControllerNavigationDirectionForward) {
-        NSArray *viewControllers = [NSArray arrayWithObject:[self.pages objectAtIndex:1]];
-        
-        [self.pageController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
-    } else {
-        NSArray *viewControllers = [NSArray arrayWithObject:[self.pages objectAtIndex:0]];
-        
-        [self.pageController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
-    }
-    
+    self.introduceViewContoller = [[PEXIntroduceViewController alloc] init];
+    self.introduceViewContoller.view.hidden = YES;
+    [self addChildViewController:self.introduceViewContoller];
+    [self.introduceViewContoller didMoveToParentViewController:self];
+    self.introduceViewContoller.view.frame = self.controllerView.bounds;
+    [self.controllerView addSubview:self.introduceViewContoller.view];
 }
 
 #pragma mark PEXProjectSearchViewControllerDelegate
@@ -146,4 +86,25 @@ static PEXSearchViewController* shardManager = nil;
 
 }
 
+- (IBAction)changeSegmentedControll:(id)sender {
+    UISegmentedControl *segmentedControl = sender;
+    
+    if(segmentedControl.selectedSegmentIndex == 0) {
+        self.projectSearchViewController.view.hidden = NO;
+        self.humanSeachViewController.view.hidden = YES;
+        self.introduceViewContoller.view.hidden = YES;
+    }
+    
+    if(segmentedControl.selectedSegmentIndex == 1) {
+        self.projectSearchViewController.view.hidden = YES;
+        self.humanSeachViewController.view.hidden = NO;
+        self.introduceViewContoller.view.hidden = YES;
+    }
+    
+    if(segmentedControl.selectedSegmentIndex == 2) {
+        self.projectSearchViewController.view.hidden = YES;
+        self.humanSeachViewController.view.hidden = YES;
+        self.introduceViewContoller.view.hidden = NO;
+    }
+}
 @end

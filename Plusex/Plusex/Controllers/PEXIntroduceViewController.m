@@ -1,20 +1,18 @@
 //
-//  PEXProjectSearchViewController.m
+//  PEXIntroduceViewController.m
 //  Plusex
 //
-//  Created by rin on 2015/03/29.
+//  Created by rin on 2015/04/11.
 //  Copyright (c) 2015年 rin. All rights reserved.
 //
 
-#import "PEXProjectSearchViewController.h"
+#import "PEXIntroduceViewController.h"
 
-@interface PEXProjectSearchViewController ()
-
-- (IBAction)tapSearchButton:(id)sender;
+@interface PEXIntroduceViewController ()
 
 @end
 
-@implementation PEXProjectSearchViewController
+@implementation PEXIntroduceViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,7 +34,4 @@
 }
 */
 
-- (IBAction)tapSearchButton:(id)sender {
-    [self.projectSearchViewControllerDelegate searchProjectWithCondition:nil];
-}
 @end

@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PEXProjectResutlViewController.h"
-#import "PEXSearchViewController.h"
 
 @protocol PEXProjectSearchViewControllerDelegate <NSObject>
 

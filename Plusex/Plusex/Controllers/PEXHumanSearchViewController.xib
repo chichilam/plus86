@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PEXHumanSearchViewController">
@@ -15,7 +15,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVE-7i-1qm">
-                    <rect key="frame" x="0.0" y="458" width="320" height="40"/>
+                    <rect key="frame" x="0.0" y="528" width="320" height="40"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDx-bT-Fcd">
                             <rect key="frame" x="109" y="5" width="102" height="30"/>
@@ -36,36 +36,19 @@
                     </constraints>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MHV-qH-bCI">
-                    <rect key="frame" x="8" y="64" width="304" height="394"/>
+                    <rect key="frame" x="8" y="0.0" width="304" height="528"/>
                     <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </scrollView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOB-cZ-5cZ">
-                    <rect key="frame" x="8" y="234" width="20" height="100"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="100" id="W0b-rP-95F"/>
-                        <constraint firstAttribute="width" constant="20" id="XAP-GG-5NX"/>
-                    </constraints>
-                    <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="←">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="tapProjectButton:" destination="-1" eventType="touchUpInside" id="YRS-3o-4VV"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="HVE-7i-1qm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="58W-HN-Shw"/>
                 <constraint firstAttribute="trailing" secondItem="HVE-7i-1qm" secondAttribute="trailing" id="8LR-QB-k5O"/>
                 <constraint firstItem="MHV-qH-bCI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="DDU-oT-axp"/>
-                <constraint firstAttribute="centerY" secondItem="iOB-cZ-5cZ" secondAttribute="centerY" id="FAc-9g-hMa"/>
-                <constraint firstItem="MHV-qH-bCI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="WGZ-qA-NmE"/>
+                <constraint firstItem="MHV-qH-bCI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="WGZ-qA-NmE"/>
                 <constraint firstItem="HVE-7i-1qm" firstAttribute="top" secondItem="MHV-qH-bCI" secondAttribute="bottom" id="Yiu-FO-MgP"/>
                 <constraint firstAttribute="trailing" secondItem="MHV-qH-bCI" secondAttribute="trailing" constant="8" id="g2I-fm-QvJ"/>
-                <constraint firstItem="iOB-cZ-5cZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="pAE-wE-g0T"/>
-                <constraint firstAttribute="bottom" secondItem="HVE-7i-1qm" secondAttribute="bottom" constant="70" id="pXR-uu-fmC"/>
+                <constraint firstAttribute="bottom" secondItem="HVE-7i-1qm" secondAttribute="bottom" id="pXR-uu-fmC"/>
             </constraints>
             <point key="canvasLocation" x="305" y="390"/>
         </view>

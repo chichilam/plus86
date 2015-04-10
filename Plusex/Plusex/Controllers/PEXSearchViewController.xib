@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PEXSearchViewController">
             <connections>
+                <outlet property="controllerView" destination="EPx-2i-vCr" id="JWj-Cc-uU1"/>
+                <outlet property="titleSegmentedControl" destination="Vn7-qz-b8j" id="WHq-Rp-3ps"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,7 +15,33 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vn7-qz-b8j">
+                    <rect key="frame" x="8" y="69" width="304" height="29"/>
+                    <segments>
+                        <segment title="Project"/>
+                        <segment title="Human"/>
+                        <segment title="Recommand"/>
+                    </segments>
+                    <connections>
+                        <action selector="changeSegmentedControll:" destination="-1" eventType="valueChanged" id="aKM-Sw-Jn1"/>
+                    </connections>
+                </segmentedControl>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPx-2i-vCr">
+                    <rect key="frame" x="8" y="102" width="304" height="416"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Vn7-qz-b8j" secondAttribute="trailing" constant="8" id="J0a-jW-A6q"/>
+                <constraint firstItem="Vn7-qz-b8j" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="69" id="ZHF-SL-KfN"/>
+                <constraint firstItem="EPx-2i-vCr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="iax-9n-5RX"/>
+                <constraint firstAttribute="bottom" secondItem="EPx-2i-vCr" secondAttribute="bottom" constant="50" id="jtL-TP-2RA"/>
+                <constraint firstItem="EPx-2i-vCr" firstAttribute="top" secondItem="Vn7-qz-b8j" secondAttribute="bottom" constant="5" id="nhn-4R-Hon"/>
+                <constraint firstItem="Vn7-qz-b8j" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="rJI-gY-zD2"/>
+                <constraint firstAttribute="trailing" secondItem="EPx-2i-vCr" secondAttribute="trailing" constant="8" id="tSV-NY-QoI"/>
+            </constraints>
             <point key="canvasLocation" x="247" y="390"/>
         </view>
     </objects>

@@ -11,11 +11,8 @@
 #import "PEXHumanSearchViewController.h"
 #import "PEXProjectResutlViewController.h"
 #import "PEXHumanResultViewController.h"
+#import "PEXIntroduceViewController.h"
 
-@interface PEXSearchViewController : UIViewController<UIPageViewControllerDataSource, UIPageViewControllerDelegate>
-
-+ (PEXSearchViewController*) shardManager;
-
--(void) scrollPageController:(UIPageViewControllerNavigationDirection) direction;
+@interface PEXSearchViewController : UIViewController
 
 @end
