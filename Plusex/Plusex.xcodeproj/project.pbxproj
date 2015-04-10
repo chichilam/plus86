@@ -37,6 +37,10 @@
 		24DF0D821AC7C786004C0677 /* PEXHumanDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DF0D801AC7C786004C0677 /* PEXHumanDetailViewController.xib */; };
 		24DF0D861AC7CDB6004C0677 /* PEXProjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF0D841AC7CDB6004C0677 /* PEXProjectDetailViewController.m */; };
 		24DF0D871AC7CDB6004C0677 /* PEXProjectDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DF0D851AC7CDB6004C0677 /* PEXProjectDetailViewController.xib */; };
+		24E650661AD81DC6005DFA69 /* PEXProjectAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E650641AD81DC6005DFA69 /* PEXProjectAddViewController.m */; };
+		24E650671AD81DC6005DFA69 /* PEXProjectAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E650651AD81DC6005DFA69 /* PEXProjectAddViewController.xib */; };
+		24E6506B1AD81DFB005DFA69 /* PEXHumanAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E650691AD81DFB005DFA69 /* PEXHumanAddViewController.m */; };
+		24E6506C1AD81DFB005DFA69 /* PEXHumanAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E6506A1AD81DFB005DFA69 /* PEXHumanAddViewController.xib */; };
 		3212ED42ED0E4EAFFEED9552 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F40DEC8359A0036A2110FC /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +105,12 @@
 		24DF0D831AC7CDB6004C0677 /* PEXProjectDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEXProjectDetailViewController.h; sourceTree = "<group>"; };
 		24DF0D841AC7CDB6004C0677 /* PEXProjectDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEXProjectDetailViewController.m; sourceTree = "<group>"; };
 		24DF0D851AC7CDB6004C0677 /* PEXProjectDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PEXProjectDetailViewController.xib; sourceTree = "<group>"; };
+		24E650631AD81DC6005DFA69 /* PEXProjectAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEXProjectAddViewController.h; sourceTree = "<group>"; };
+		24E650641AD81DC6005DFA69 /* PEXProjectAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEXProjectAddViewController.m; sourceTree = "<group>"; };
+		24E650651AD81DC6005DFA69 /* PEXProjectAddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PEXProjectAddViewController.xib; sourceTree = "<group>"; };
+		24E650681AD81DFB005DFA69 /* PEXHumanAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEXHumanAddViewController.h; sourceTree = "<group>"; };
+		24E650691AD81DFB005DFA69 /* PEXHumanAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEXHumanAddViewController.m; sourceTree = "<group>"; };
+		24E6506A1AD81DFB005DFA69 /* PEXHumanAddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PEXHumanAddViewController.xib; sourceTree = "<group>"; };
 		82036DB05E576E38897072D8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		828ADD057E37FA889C878515 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A1F40DEC8359A0036A2110FC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,6 +215,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		24BE00D41AD82C8E00FFF239 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 		24DD78A21AD815D300B4352A /* Lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +244,7 @@
 		24DF0D431AC79DD7004C0677 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				24BE00D41AD82C8E00FFF239 /* Common */,
 				244278B41ACEFCD5002867DA /* Search */,
 				244278B01ACEFB9C002867DA /* TabBar */,
 				24DF0D741AC7C449004C0677 /* Startup */,
@@ -263,6 +281,9 @@
 				24DF0D831AC7CDB6004C0677 /* PEXProjectDetailViewController.h */,
 				24DF0D841AC7CDB6004C0677 /* PEXProjectDetailViewController.m */,
 				24DF0D851AC7CDB6004C0677 /* PEXProjectDetailViewController.xib */,
+				24E650631AD81DC6005DFA69 /* PEXProjectAddViewController.h */,
+				24E650641AD81DC6005DFA69 /* PEXProjectAddViewController.m */,
+				24E650651AD81DC6005DFA69 /* PEXProjectAddViewController.xib */,
 			);
 			name = Project;
 			sourceTree = "<group>";
@@ -279,6 +300,9 @@
 				24DF0D7E1AC7C786004C0677 /* PEXHumanDetailViewController.h */,
 				24DF0D7F1AC7C786004C0677 /* PEXHumanDetailViewController.m */,
 				24DF0D801AC7C786004C0677 /* PEXHumanDetailViewController.xib */,
+				24E650681AD81DFB005DFA69 /* PEXHumanAddViewController.h */,
+				24E650691AD81DFB005DFA69 /* PEXHumanAddViewController.m */,
+				24E6506A1AD81DFB005DFA69 /* PEXHumanAddViewController.xib */,
 			);
 			name = Human;
 			sourceTree = "<group>";
@@ -404,6 +428,8 @@
 			files = (
 				244278BE1ACEFF72002867DA /* PEXSearchViewController.xib in Resources */,
 				24DF0D6E1AC7C303004C0677 /* PEXProjectResutlViewController.xib in Resources */,
+				24E650671AD81DC6005DFA69 /* PEXProjectAddViewController.xib in Resources */,
+				24E6506C1AD81DFB005DFA69 /* PEXHumanAddViewController.xib in Resources */,
 				24DF0D641AC7BB83004C0677 /* PEXManagementViewController.xib in Resources */,
 				24DF0D821AC7C786004C0677 /* PEXHumanDetailViewController.xib in Resources */,
 				24DF0D481AC79DFA004C0677 /* PEXStartupViewController.xib in Resources */,
@@ -473,6 +499,8 @@
 				24DF0D411AC79B94004C0677 /* PEXAppDelegate.m in Sources */,
 				24DF0D631AC7BB83004C0677 /* PEXManagementViewController.m in Sources */,
 				24DF0D6D1AC7C303004C0677 /* PEXProjectResutlViewController.m in Sources */,
+				24E6506B1AD81DFB005DFA69 /* PEXHumanAddViewController.m in Sources */,
+				24E650661AD81DC6005DFA69 /* PEXProjectAddViewController.m in Sources */,
 				244278B31ACEFBAE002867DA /* PEXTabBarViewController.m in Sources */,
 				24DF0D811AC7C786004C0677 /* PEXHumanDetailViewController.m in Sources */,
 				24DF0D471AC79DFA004C0677 /* PEXStartupViewController.m in Sources */,

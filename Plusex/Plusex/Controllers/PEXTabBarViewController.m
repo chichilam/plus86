@@ -17,8 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    [self addCenterButtonWithImage:[UIImage imageNamed:@"hood"] highlightImage:[UIImage imageNamed:@"hood-selected"] target:self action:@selector(buttonPressed:)];
+    [self addMenu];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,9 +36,8 @@
 */
 
 // Create a custom UIButton and add it to the center of our tab bar
-- (void)addCenterButtonWithImage:(UIImage *)buttonImage highlightImage:(UIImage *)highlightImage target:(id)target action:(SEL)action
-{
-    
+
+-(void) addMenu {
     CGRect rect = [[[UIApplication sharedApplication] delegate] window].bounds;
     
     UIImage *storyMenuItemImage = [UIImage imageNamed:@"bg-menuitem.png"];
@@ -67,18 +65,18 @@
     
     NSArray *menuItems = [NSArray arrayWithObjects:starMenuItem1, starMenuItem2, starMenuItem3, nil];
     
-    AwesomeMenu *menu = [[AwesomeMenu alloc] initWithFrame:rect startItem:startItem menuItems:menuItems];
-    menu.delegate = self;
+    self.menu = [[AwesomeMenu alloc] initWithFrame:rect startItem:startItem menuItems:menuItems];
+    self.menu.delegate = self;
     
-    menu.rotateAngle = -0.75;
-    menu.menuWholeAngle = M_PI_2;
-    menu.farRadius = 110.0f; //展開距離
-    menu.endRadius = 100.0f; //ボタン距離
-    menu.nearRadius = 90.0f; //集中距離
-    menu.animationDuration = 0.3f;
-    menu.startPoint = CGPointMake(rect.size.width/2, rect.size.height - 25); //center of plus button
+    self.menu.rotateAngle = -0.75;
+    self.menu.menuWholeAngle = M_PI_2;
+    self.menu.farRadius = 110.0f; //展開距離
+    self.menu.endRadius = 100.0f; //ボタン距離
+    self.menu.nearRadius = 90.0f; //集中距離
+    self.menu.animationDuration = 0.3f;
+    self.menu.startPoint = CGPointMake(rect.size.width/2, rect.size.height - 25); //center of plus button
     
-    [self.view addSubview:menu];
+    [self.view addSubview:self.menu];
 }
 
 - (void)awesomeMenu:(AwesomeMenu *)menu didSelectIndex:(NSInteger)idx
@@ -92,36 +90,19 @@
     NSLog(@"Menu is open!");
 }
 
-- (void)buttonPressed:(id)sender
-{
-    [self setSelectedIndex:1];
-    [self performSelector:@selector(doHighlight:) withObject:sender afterDelay:0];
-}
-
-- (void)doHighlight:(UIButton*)b {
-    [b setHighlighted:YES];
-}
-
-- (void)doNotHighlight:(UIButton*)b {
-    [b setHighlighted:NO];
-}
-
+#pragma mark - UITabBarDelegate
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
 {
-    if(self.tabBarController.selectedIndex != 2){
-//        [self performSelector:@selector(doNotHighlight:) withObject:self.centerButton afterDelay:0];
-    }
+
 }
 
 - (BOOL)tabBarHidden {
-//    return self.centerButton.hidden && self.tabBar.hidden;
-    
-    return self.tabBar.hidden;
+    return self.menu.hidden && self.tabBar.hidden;
 }
 
 - (void)setTabBarHidden:(BOOL)tabBarHidden
 {
-//    self.centerButton.hidden = tabBarHidden;
+    self.menu.hidden = tabBarHidden;
     self.tabBar.hidden = tabBarHidden;
 }
 

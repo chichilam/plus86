@@ -66,10 +66,14 @@
 - (IBAction)tapLoginButton:(id)sender {
     //FIXME login process
     
+    [self segmentToHome];
+}
+
+-(void) segmentToHome {
     PEXTabBarViewController *tabBarController = [[PEXTabBarViewController alloc] init];
     
     PEXSearchViewController *searchViewController = [[PEXSearchViewController alloc] init];
-//    UINavigationController *sViewController = [[UINavigationController alloc] initWithRootViewController:searchViewController];
+    //    UINavigationController *sViewController = [[UINavigationController alloc] initWithRootViewController:searchViewController];
     
     PEXManagementViewController *managemnetViewController = [[PEXManagementViewController alloc] init];
     UINavigationController *mNavigationController = [[UINavigationController alloc] initWithRootViewController:managemnetViewController];

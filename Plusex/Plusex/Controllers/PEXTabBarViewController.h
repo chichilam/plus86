@@ -13,10 +13,6 @@
 
 @property(nonatomic, assign) BOOL tabBarHidden;
 
--(void)addCenterButtonWithImage:(UIImage *)buttonImage highlightImage:(UIImage *)highlightImage target:(id)target action:(SEL)action;
-
-//@property(nonatomic, weak) IBOutlet UIButton *centerButton;
-
-@property (weak, nonatomic) AwesomeMenu *menu;
+@property (strong, nonatomic) AwesomeMenu *menu;
 
 @end
