@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "PEXProjectDetailViewController.h"
+#import "PEXProjectSearchTableViewCell.h"
+
 
 @interface PEXProjectResutlViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 

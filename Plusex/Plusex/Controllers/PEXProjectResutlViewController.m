@@ -8,6 +8,8 @@
 
 #import "PEXProjectResutlViewController.h"
 
+#define ProjectCellHeight 225.0
+
 @interface PEXProjectResutlViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *resultTableView;
@@ -20,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    UINib *nib = [UINib nibWithNibName:@"PEXProjectSearchTableViewCell" bundle:nil];
+    [self.resultTableView registerNib:nib forCellReuseIdentifier:@"PEXProjectSearchTableViewCell"];
     
     [self fetchData];
     
@@ -60,16 +64,23 @@
 }
 
 #pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return ProjectCellHeight;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return dataArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSDictionary *dataDic = dataArr[indexPath.row];
     
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-    
-    cell.textLabel.text = [dataDic objectForKey:@"name"];
+    static NSString *CellIdentifier = @"PEXProjectSearchTableViewCell";
+    PEXProjectSearchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    if (!cell) {
+        cell = [[PEXProjectSearchTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+    reuseIdentifier:CellIdentifier];
+    }
     
     return cell;
 }
