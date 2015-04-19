@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PEXHumanDetailViewController.h"
+#import "PEXHumanSearchTableViewCell.h"
 
 @interface PEXHumanResultViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
