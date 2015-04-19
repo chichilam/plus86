@@ -184,6 +184,7 @@
 			children = (
 				24DD78A21AD815D300B4352A /* Lib */,
 				24DF0D431AC79DD7004C0677 /* Controllers */,
+				2461CBA91AE3737B00385D21 /* Views */,
 				24DF0D3F1AC79B94004C0677 /* PEXAppDelegate.h */,
 				24DF0D401AC79B94004C0677 /* PEXAppDelegate.m */,
 				245D57C01AC189A800214FCC /* Images.xcassets */,
@@ -218,6 +219,13 @@
 				245D57CE1AC189A800214FCC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2461CBA91AE3737B00385D21 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		24BE00D51AD83FEC00FFF239 /* Introduce */ = {
