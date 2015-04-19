@@ -32,7 +32,6 @@
                         <constraint firstAttribute="height" constant="40" id="601-zS-eUE"/>
                         <constraint firstAttribute="centerY" secondItem="iDx-bT-Fcd" secondAttribute="centerY" id="KMc-Ck-W3b"/>
                         <constraint firstAttribute="centerX" secondItem="iDx-bT-Fcd" secondAttribute="centerX" id="VIH-K0-Z6z"/>
-                        <constraint firstAttribute="width" constant="320" id="sWK-J9-oAL"/>
                     </constraints>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MHV-qH-bCI">
